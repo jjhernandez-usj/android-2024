@@ -7,6 +7,10 @@ android {
     namespace = "com.usj.android2024"
     compileSdk = 34
 
+    viewBinding {
+        enable = true
+    }
+
     defaultConfig {
         applicationId = "com.usj.android2024"
         minSdk = 33
