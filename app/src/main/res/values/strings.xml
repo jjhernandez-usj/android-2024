@@ -2,5 +2,6 @@
     <string name="app_name">ClassApplication</string>
     <string name="greet">Greetings</string>
     <string name="hello_world">Hello, World!</string>
+    <string name="call">Call</string>
 
 </resources>
