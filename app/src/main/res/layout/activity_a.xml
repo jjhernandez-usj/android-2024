@@ -7,22 +7,24 @@
     tools:context=".ActivityA">
 
     <Button
-        android:id="@+id/btnAtoC"
+        android:id="@+id/btnAtoB"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:text="@string/to_c"
+        android:layout_height="wrap_content"
+        android:text="@string/start_activity_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnAtoB"
+        android:id="@+id/btnAtoC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/to_b"
+        android:layout_marginTop="36dp"
+        android:text="@string/start_activity_c"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAtoC" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAtoB"
+        app:layout_constraintVertical_bias="0.175" />
 </androidx.constraintlayout.widget.ConstraintLayout>
