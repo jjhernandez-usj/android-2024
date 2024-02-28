@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(view.root)
-        view.textview.text = "Hello, Class!"
+        view.tvHello.text = "Hello, Class!!"
     }
 }
