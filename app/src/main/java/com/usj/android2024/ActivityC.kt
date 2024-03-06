@@ -25,6 +25,5 @@ class ActivityC : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:112"))
             startActivity(intent)
         }
-        // view.btnBToD.setOnClickListener {  }
     }
 }

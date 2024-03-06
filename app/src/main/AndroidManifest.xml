@@ -15,7 +15,8 @@
             android:exported="false" />
         <activity
             android:name=".ActivityC"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".ActivityB"
             android:exported="false" />
