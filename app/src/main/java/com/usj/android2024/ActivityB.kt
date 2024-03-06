@@ -15,7 +15,17 @@ class ActivityB : AppCompatActivity() {
             val intent = Intent(this,ActivityA::class.java)
             startActivity(intent)
         }
-        view.btnBToD.setOnClickListener {  }
+        view.btnBToD.setOnClickListener {
+            val intent = Intent(this,ActivityD::class.java)
+            startActivityForResult(intent, CODE)
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val text = data?.getStringExtra(key)?: "No Text"
+        view.tvResult.text = text
 
     }
 }
