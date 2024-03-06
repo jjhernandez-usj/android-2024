@@ -23,19 +23,19 @@
             android:id="@+id/btnCtoA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="toA" />
+            android:text="@string/toa" />
 
         <Button
             android:id="@+id/btnCall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="@string/call"
             tools:text="@string/call" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnSend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/send" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

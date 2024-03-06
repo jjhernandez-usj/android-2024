@@ -8,5 +8,8 @@
     <string name="to_c">to C</string>
     <string name="a">A</string>
     <string name="d">D</string>
-
+    <string name="toa">toA</string>
+    <string name="send">Send</string>
+    <string name="start_activity_b">To B</string>
+    <string name="start_activity_c">To C</string>
 </resources>

@@ -10,7 +10,7 @@ class ActivityB : AppCompatActivity() {
     private val view by lazy { ActivityBBinding.inflate(layoutInflater) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_b)
+        setContentView(view.root)
         view.btnBToA.setOnClickListener {
             val intent = Intent(this,ActivityA::class.java)
             startActivity(intent)
