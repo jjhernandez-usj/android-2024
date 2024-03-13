@@ -17,4 +17,10 @@
     <string name="user">User</string>
     <string name="name">Name</string>
     <string name="login">login</string>
+    <string name="init_operation">Init operation</string>
+    <string name="type_the_name">Type the name</string>
+    <string name="type_the_surname">Type the surname</string>
+    <string name="citizen">Citizen</string>
+    <string name="company">Company</string>
+    <string name="type_the_company_id">Type the company Id</string>
 </resources>

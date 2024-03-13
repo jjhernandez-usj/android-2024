@@ -13,7 +13,7 @@ class ActivityA4 : AppCompatActivity() {
         setContentView(view.root)
         view.login.setOnClickListener {
             if (!isEmpty() && login() ){
-                val intent = Intent (this,ActivityB::class.java)
+                val intent = Intent (this,ActivityB4::class.java)
                 startActivity(intent)
             }
         }
