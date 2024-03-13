@@ -22,4 +22,4 @@ class IntentsActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-}
+}//test
