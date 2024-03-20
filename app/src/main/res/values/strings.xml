@@ -24,4 +24,6 @@
     <string name="company">Company</string>
     <string name="type_the_company_id">Type the company Id</string>
     <string name="_666666">666666</string>
+    <string name="company_email">info@mobapps.com</string>
+    <string name="company_web">https://google.com</string>
 </resources>

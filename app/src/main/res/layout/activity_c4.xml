@@ -72,7 +72,7 @@
                 android:id="@+id/tvCompanyEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="info@mobapps.com" />
+                android:text="@string/company_email" />
         </TableRow>
 
         <TableRow
@@ -89,7 +89,7 @@
                 android:id="@+id/tvCompanyWeb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="http://google.com" />
+                android:text="@string/company_web" />
         </TableRow>
 
     </TableLayout>
