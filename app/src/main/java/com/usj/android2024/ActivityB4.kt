@@ -1,9 +1,12 @@
 package com.usj.android2024
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.usj.android2024.databinding.ActivityB4Binding
+
+const val COMPANY_ID = "123" // Key
 
 class ActivityB4 : AppCompatActivity() {
     private val view by lazy { ActivityB4Binding.inflate(layoutInflater) }
@@ -24,5 +27,23 @@ class ActivityB4 : AppCompatActivity() {
             }
         }
 
+        view.btnInitCompany.setOnClickListener {
+            if(checkCompanyID()){
+                val intent = Intent(this, ActivityC4::class.java)
+                intent.putExtra(COMPANY_ID, view.etCompanyId.text.toString())
+                startActivity(intent)
+            }
+        }
+
+        view.btnInitCitizen.setOnClickListener {
+            val intent = Intent(this, ActivityD4::class.java)
+            startActivity(intent)
+        }
+
     }
+
+    fun checkCompanyID() : Boolean{
+        return view.etCompanyId.text.isNotEmpty()
+    }
+
 }
