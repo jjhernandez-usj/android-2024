@@ -17,9 +17,9 @@ class IntentsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:636307924"))
             startActivity(intent)
         }
-        view.btnLifecycle.setOnClickListener{
-            val intent = Intent(this,LifecycleActivity::class.java)
-            startActivity(intent)
-        }
+//        view.btnLifecycle.setOnClickListener{
+//            val intent = Intent(this,LifecycleActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 }
