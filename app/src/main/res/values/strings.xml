@@ -26,4 +26,12 @@
     <string name="_666666">666666</string>
     <string name="company_email">info@mobapps.com</string>
     <string name="company_web">https://google.com</string>
+    <string name="tvweighttext">Weight</string>
+    <string name="kg">Kg.</string>
+    <string name="soft_tyre">Soft Tyre</string>
+    <string name="product_1">Product 1</string>
+    <string name="medium_tyre">Medium Tyre</string>
+    <string name="product_2">Product 2</string>
+    <string name="hard_tyre">Hard Tyre</string>
+    <string name="product_3">Product 3</string>
 </resources>
