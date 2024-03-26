@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ActivityD4">
 
     <LinearLayout
@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/tvNameOfClient"
             android:layout_width="match_parent"
-            android:layout_height="54dp"
+            android:layout_height="36dp"
             android:text="@string/citizen" />
 
         <TableLayout
@@ -36,14 +36,14 @@
 
                 <ImageView
                     android:id="@+id/ivSoftTyre"
-                    android:layout_width="138dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:contentDescription="@string/soft_tyre"
                     app:srcCompat="@drawable/neumaticopirelliblando" />
 
                 <CheckBox
                     android:id="@+id/cbProductOne"
-                    android:layout_width="187dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/product_1" />
             </TableRow>
@@ -54,8 +54,8 @@
 
                 <ImageView
                     android:id="@+id/ivMediumTyre"
-                    android:layout_width="166dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:contentDescription="@string/medium_tyre"
                     app:srcCompat="@drawable/neumaticopirellimedio" />
 
@@ -72,8 +72,8 @@
 
                 <ImageView
                     android:id="@+id/ivHardTyre"
-                    android:layout_width="141dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:contentDescription="@string/hard_tyre"
                     app:srcCompat="@drawable/neumaticopirelliduro" />
 
@@ -93,19 +93,19 @@
 
             <TextView
                 android:id="@+id/tvWeightText"
-                android:layout_width="91dp"
-                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/tvweighttext" />
 
             <TextView
                 android:id="@+id/tvWeightValue"
-                android:layout_width="94dp"
-                android:layout_height="31dp" />
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tvKgText"
-                android:layout_width="97dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/kg" />
 
         </LinearLayout>
