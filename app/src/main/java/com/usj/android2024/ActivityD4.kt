@@ -13,7 +13,7 @@ class ActivityD4 : AppCompatActivity() {
         setContentView(view.root)
 
         // Retrieve the client name from ActivityB4
-        val clientName = intent.getStringExtra("CLIENT_NAME") ?: "Unknown"
+        val clientName = intent.getStringExtra("etCitizenName") ?: "Unknown"
         view.tvNameOfClient.text = clientName
 
         // Set listeners for all product checkboxes
