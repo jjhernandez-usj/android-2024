@@ -37,7 +37,7 @@ class ActivityD4 : AppCompatActivity() {
         if(view.cbProduct2.isChecked) total += this.weightP2
         if(view.cbProduct3.isChecked) total += this.weightP3
 
-        view.tvTotalWeight.text = total.toString()
+        view.tvTotalValue.text = total.toString()
 
     }
 }
