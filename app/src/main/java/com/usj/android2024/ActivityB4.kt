@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.usj.android2024.databinding.ActivityB4Binding
 
 const val COMPANY_ID = "123" // Key
+const val NAME_ID = "ivan_royo" // Key for name
 
 class ActivityB4 : AppCompatActivity() {
     private val view by lazy { ActivityB4Binding.inflate(layoutInflater) }
@@ -35,10 +36,11 @@ class ActivityB4 : AppCompatActivity() {
             }
         }
 
-//        view.btnInitCitizen.setOnClickListener {
-//            val intent = Intent(this, ActivityD4::class.java)
-//            startActivity(intent)
-//        }
+        view.btnInitCitizen.setOnClickListener {
+            val intent = Intent(this, ActivityD4::class.java)
+            intent.putExtra(NAME_ID, view.etCitizenName.text.toString())
+            startActivity(intent)
+        }
 
     }
 

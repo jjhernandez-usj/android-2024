@@ -26,4 +26,12 @@
     <string name="_666666">666666</string>
     <string name="company_email">info@mobapps.com</string>
     <string name="company_web">https://google.com</string>
+    <string name="etname">Name</string>
+    <string name="product_1">Product 1</string>
+    <string name="product_2">Product 2</string>
+    <string name="product_3">Product 3</string>
+    <string name="kg">KG</string>
+    <string name="name2">Name</string>
+    <string name="weight">Weight</string>
+    <string name="_0">0</string>
 </resources>
