@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApplication">
         <activity
+            android:name=".ActivityD4"
+            android:exported="false" />
+        <activity
             android:name=".ActivityC4"
             android:exported="false" />
         <activity

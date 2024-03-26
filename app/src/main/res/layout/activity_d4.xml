@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".ActivityD4">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <EditText
+                    android:id="@+id/etNameClient"
+                    android:layout_width="151dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imProduct1"
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:importantForAccessibility="no"
+                    app:srcCompat="@android:drawable/alert_dark_frame" />
+
+                <CheckBox
+                    android:id="@+id/cbProduct1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="product1" />
+
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imProduct2"
+                    android:layout_width="97dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:importantForAccessibility="no"
+                    app:srcCompat="@android:drawable/arrow_down_float"
+                    tools:ignore="ImageContrastCheck" />
+
+                <CheckBox
+                    android:id="@+id/cbProduct2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="product2" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/btn_star_big_on"
+                    tools:ignore="ImageContrastCheck" />
+
+                <CheckBox
+                    android:id="@+id/cbProduct3"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="product3" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/etWeight"
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weight"
+                    tools:ignore="TextSizeCheck" />
+
+                <EditText
+                    android:id="@+id/etKg"
+                    android:layout_width="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/darker_gray"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/twKG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="kg" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

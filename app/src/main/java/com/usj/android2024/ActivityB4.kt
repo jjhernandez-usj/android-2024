@@ -35,10 +35,11 @@ class ActivityB4 : AppCompatActivity() {
             }
         }
 
-//        view.btnInitCitizen.setOnClickListener {
-//            val intent = Intent(this, ActivityD4::class.java)
-//            startActivity(intent)
-//        }
+        view.btnInitCitizen.setOnClickListener {
+           val intent = Intent(this, ActivityD4::class.java)
+            intent.putExtra("cityzen", view.etCitizenName.getText().toString());
+            startActivity(intent)
+        }
 
     }
 
