@@ -11,12 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApplication">
         <activity
+            android:name=".ActivityD4"
+            android:exported="false" />
+        <activity
             android:name=".ActivityD"
             android:exported="false" />
         <activity
             android:name=".ActivityC"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".ActivityB"
             android:exported="false" />
