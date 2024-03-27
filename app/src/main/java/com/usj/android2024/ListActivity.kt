@@ -35,6 +35,9 @@ class ListActivity : AppCompatActivity() {
             adapter.remove(country)
         }
 
+        view.btnAddCountry.setOnClickListener {
+            adapter.add(view.etNewCountry.text.toString())
+        }
 
     }
 }
