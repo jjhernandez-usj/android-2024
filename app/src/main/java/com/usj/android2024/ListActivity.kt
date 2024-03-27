@@ -31,11 +31,12 @@ class ListActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val people = mutableListOf(Item("Juanjo", "Hernández"))
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
-        view.lvCountries.adapter = adapter
+        val customAdapter = CustomAdapter(this, people)
+        view.lvCountries.adapter = customAdapter
 
-        view.lvCountries.setOnItemClickListener { _, _, position, _ ->
+        /*view.lvCountries.setOnItemClickListener { _, _, position, _ ->
             val country = countries[position]
             Toast.makeText(this, country, LENGTH_SHORT).show()
             adapter.remove(country)
@@ -43,13 +44,16 @@ class ListActivity : AppCompatActivity() {
 
         view.btnAddCountry.setOnClickListener {
             adapter.add(view.etNewCountry.text.toString())
-        }
+        }*/
 
     }
 }
 
 
-class Item(val name: String, val surname: String){}
+class Item(val name: String, val surname: String) {
+
+}
+
 class CustomAdapter (val context: Context, val items: MutableList<Item>): BaseAdapter() {
     override fun getCount(): Int {
         return items.size
