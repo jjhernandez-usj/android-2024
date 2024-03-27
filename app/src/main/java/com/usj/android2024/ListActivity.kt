@@ -15,7 +15,7 @@ class ListActivity : AppCompatActivity() {
     private val view by lazy {
         ActivityListBinding.inflate(layoutInflater)
     }
-    private val countries = arrayOf("Spain", "Turkey", "Portugal", "France")
+    private val countries = mutableListOf("Spain", "Turkey", "Portugal", "France")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,13 +25,16 @@ class ListActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
         view.lvCountries.adapter = adapter
 
         view.lvCountries.setOnItemClickListener { _, _, position, _ ->
             val country = countries[position]
             Toast.makeText(this, country, LENGTH_SHORT).show()
+            adapter.remove(country)
         }
+
 
     }
 }
