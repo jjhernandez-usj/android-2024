@@ -37,6 +37,7 @@ class ActivityB4 : AppCompatActivity() {
 
         view.btnInitCitizen.setOnClickListener {
             val intent = Intent(this, ActivityD4::class.java)
+            intent.putExtra("CITIZEN", view.etCitizenName.text.toString())
             startActivity(intent)
         }
 
