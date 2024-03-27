@@ -3,7 +3,6 @@ package com.usj.android2024
 import android.os.Bundle
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
-import com.usj.android2024.databinding.ActivityB4Binding
 import com.usj.android2024.databinding.ActivityD4Binding
 
 class ActivityD4 : AppCompatActivity() {
