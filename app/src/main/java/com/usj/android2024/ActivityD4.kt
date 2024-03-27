@@ -26,7 +26,6 @@ class ActivityD4 : AppCompatActivity() {
                     sum = 0
                 }
             }
-            if (sum < 0) sum = 0
             view.etKg.setText(sum.toString())
         }
 
