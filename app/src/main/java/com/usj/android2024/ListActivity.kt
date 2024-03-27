@@ -1,7 +1,13 @@
 package com.usj.android2024
 
+import android.content.Context
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.BaseAdapter
+import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
 import androidx.activity.enableEdgeToEdge
@@ -41,3 +47,31 @@ class ListActivity : AppCompatActivity() {
 
     }
 }
+
+
+class Item(val name: String, val surname: String){}
+class CustomAdapter (val context: Context, val items: MutableList<Item>): BaseAdapter() {
+    override fun getCount(): Int {
+        return items.size
+    }
+
+    override fun getItem(position: Int): Item {
+       return items[position]
+    }
+
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val item = getItem(position)
+        val layoutInflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(R.layout.item_layout,null)
+        view.findViewById<TextView>(R.id.tv1).text = item.name
+        view.findViewById<TextView>(R.id.tv2).text = item.surname
+        return view
+    }
+
+}
+
+
