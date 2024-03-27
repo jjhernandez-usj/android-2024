@@ -2,6 +2,8 @@ package com.usj.android2024
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,5 +27,11 @@ class ListActivity : AppCompatActivity() {
         }
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
         view.lvCountries.adapter = adapter
+
+        view.lvCountries.setOnItemClickListener { _, _, position, _ ->
+            val country = countries[position]
+            Toast.makeText(this, country, LENGTH_SHORT).show()
+        }
+
     }
 }
