@@ -11,12 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassApplication">
         <activity
+            android:name=".ListActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ActivityD"
             android:exported="false" />
         <activity
             android:name=".ActivityC"
             android:exported="false"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance" />
         <activity
             android:name=".ActivityB"
             android:exported="false" />
