@@ -6,12 +6,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -57,7 +54,7 @@ class ListActivity : AppCompatActivity() {
 
         listView.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, DetailActivity::class.java).apply {
-                // Pasamos el nombre y género como ejemplo, ajusta según tu DetailActivity
+                // We give the name and the gender as an example
                 putExtra("name", Persons.people[position].name)
                 putExtra("gender", Persons.people[position].gender)
             }
