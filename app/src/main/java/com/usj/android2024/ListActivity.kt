@@ -15,22 +15,22 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.usj.android2024.databinding.ActivityListBinding
 
-class ListActivity : AppCompatActivity() {
 
-    data class Person(val name: String, val gender: String)
+data class Person(val name: String, val gender: String)
 
-    object Persons {
-        val people = mutableListOf<Person>()
+object Persons {
+    val people = mutableListOf<Person>()
 
-        fun add(person: Person) {
-            people.add(person);
-        }
-
-        init {
-            people.add(Person("Juanjo", "Male"))
-            people.add(Person("Juanjo", "Male"))
-        }
+    fun add(person: Person) {
+        people.add(person);
     }
+
+    init {
+        people.add(Person("Juanjo", "Male"))
+        people.add(Person("Juan", "Male"))
+    }
+}
+class ListActivity : AppCompatActivity() {
 
 
     private val view by lazy {
@@ -49,32 +49,16 @@ class ListActivity : AppCompatActivity() {
 
 
         val listView = findViewById<ListView>(R.id.lvCountries)
-        val customAdapter = CustomPersonAdapter(this, Persons.people)
+        val customAdapter = CustomPersonAdapter(this)
         listView.adapter = customAdapter
 
         listView.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, DetailActivity::class.java).apply {
-                // We give the name and the gender as an example
-                putExtra("name", Persons.people[position].name)
-                putExtra("gender", Persons.people[position].gender)
+
+                putExtra("index",position)
             }
             startActivity(intent)
         }
-
-        //val people = mutableListOf(Item("Juanjo", "Hernández"))
-        //val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
-        //val customAdapter = CustomAdapter(this, people)
-        //view.lvCountries.adapter = customAdapter
-
-        /*view.lvCountries.setOnItemClickListener { _, _, position, _ ->
-            val country = countries[position]
-            Toast.makeText(this, country, LENGTH_SHORT).show()
-            adapter.remove(country)
-        }
-
-        view.btnAddCountry.setOnClickListener {
-            adapter.add(view.etNewCountry.text.toString())
-        }*/
 
     }
 }
@@ -108,17 +92,17 @@ class CustomAdapter (val context: Context, val items: MutableList<Item>): BaseAd
 
 }
 
-class CustomPersonAdapter(private val context: Context, private val people: List<ListActivity.Person>) : BaseAdapter() {
-    override fun getCount(): Int = people.size
+class CustomPersonAdapter(private val context: Context) : BaseAdapter() {
+    override fun getCount(): Int = Persons.people.size
 
-    override fun getItem(position: Int): Any = people[position]
+    override fun getItem(position: Int): Any = Persons.people[position]
 
     override fun getItemId(position: Int): Long = position.toLong()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = convertView ?: inflater.inflate(android.R.layout.simple_list_item_1, parent, false)
-        val person = getItem(position) as ListActivity.Person
+        val person = getItem(position) as Person
         (view.findViewById(android.R.id.text1) as TextView).text = person.name
         return view
     }
