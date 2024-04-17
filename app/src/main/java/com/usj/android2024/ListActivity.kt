@@ -61,51 +61,7 @@ class ListActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //val people = mutableListOf(Item("Juanjo", "Hernández"))
-        //val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, countries)
-        //val customAdapter = CustomAdapter(this, people)
-        //view.lvCountries.adapter = customAdapter
-
-        /*view.lvCountries.setOnItemClickListener { _, _, position, _ ->
-            val country = countries[position]
-            Toast.makeText(this, country, LENGTH_SHORT).show()
-            adapter.remove(country)
-        }
-
-        view.btnAddCountry.setOnClickListener {
-            adapter.add(view.etNewCountry.text.toString())
-        }*/
-
     }
-}
-
-
-class Item(val name: String, val surname: String) {
-
-}
-
-class CustomAdapter (val context: Context, val items: MutableList<Item>): BaseAdapter() {
-    override fun getCount(): Int {
-        return items.size
-    }
-
-    override fun getItem(position: Int): Item {
-       return items[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return position.toLong()
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val item = getItem(position)
-        val layoutInflater = this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = layoutInflater.inflate(R.layout.item_layout,null)
-        view.findViewById<TextView>(R.id.tv1).text = item.name
-        view.findViewById<TextView>(R.id.tv2).text = item.surname
-        return view
-    }
-
 }
 
 class CustomPersonAdapter(private val context: Context, private val people: List<ListActivity.Person>) : BaseAdapter() {
